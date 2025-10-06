@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bhavin Sachaniya | Full Stack Dev</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.5s ease-out forwards',
+              'slide-up': 'slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+              'blob': 'blob 18s infinite ease-in-out',
+              'background-pan': 'backgroundPan 3s linear infinite',
+              'grow-height': 'growHeight 2s cubic-bezier(0.25, 1, 0.5, 1) forwards',
+              'text-slide': 'textSlide 12s cubic-bezier(0.23, 1, 0.32, 1) infinite',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: 0 },
+                '100%': { opacity: 1 },
+              },
+              slideUp: {
+                '0%': { transform: 'translateY(20px)', opacity: 0 },
+                '100%': { transform: 'translateY(0)', opacity: 1 },
+              },
+              growHeight: {
+                'from': { height: '0' },
+                'to': { height: '100%' },
+              },
+              blob: {
+                '0%, 100%': { transform: 'translate(0, 0) scale(1)' },
+                '33%': { transform: 'translate(2rem, -3rem) scale(1.1)' },
+                '66%': { transform: 'translate(-1.5rem, 1.5rem) scale(0.9)' },
+              },
+              backgroundPan: {
+                '0%': { backgroundPosition: '0% center' },
+                '100%': { backgroundPosition: '-200% center' },
+              },
+              textSlide: {
+                '0%, 16.66%': { transform: 'translateY(0%)' },
+                '25%, 41.66%': { transform: 'translateY(-25%)' },
+                '50%, 66.66%': { transform: 'translateY(-50%)' },
+                '75%, 100%': { transform: 'translateY(-75%)' },
+              },
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background-color: #0A0A0A;
+        color: #fff;
+        font-family: 'Inter', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
